@@ -97,32 +97,13 @@ docker-compose up --build
 > }
 > ```
 
-### Sucessful Terminal
-![terminal](
 ### Stop the Services
 
 ```bash
 docker-compose down
 ```
 
-## 📁 Sample `Dockerfile`
-
-All services use a similar Dockerfile:
-
-```Dockerfile
-FROM node:18
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-
-CMD ["npm", "start"]
-```
-
-## 🧪 Testing Services
+## Testing Services
 
 After running `docker-compose up`, your services will be available on the following ports (configurable via `docker-compose.yml`):
 
@@ -131,11 +112,20 @@ After running `docker-compose up`, your services will be available on the follow
 * Product Service: `http://localhost:3002`
 * Order Service: `http://localhost:3003`
 
-## 📌 Notes
 
-* Remove the deprecated `version` field from `docker-compose.yml` to avoid warnings.
-* Consider adding logging, health checks, and environment variable configs for production use.
+### Sucessful Terminal
 
-## 📜 License
+![terminal](screenshots/docker-compose_terminal.png)
 
-This project is licensed under the MIT License.
+
+### Gateway_local
+
+![terminal](screenshots/gateway_local.png)
+
+### Product_local
+
+![terminal](screenshots/products_local.png)
+
+### User_local
+
+![terminal](screenshots/user_local.png)
