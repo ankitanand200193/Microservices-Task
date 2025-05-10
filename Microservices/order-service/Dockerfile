@@ -1,6 +1,18 @@
-FROM node:20-alpine
-WORKDIR /order-service
-COPY . .
+FROM node:18
+
+
+WORKDIR /app
+
+COPY package*.json ./
+
+
 RUN npm install
+
+
+COPY . .
+
+
 EXPOSE 3002
-CMD['node', 'app.js']
+
+
+CMD ["npm", "start"]
